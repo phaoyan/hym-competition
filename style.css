@@ -19,13 +19,14 @@ header h1 {
     margin-bottom: 10px;
 }
 
+/* 添加或修改为以下代码 */
 main {
-    max-width: 1200px;
+    max-width: 800px; /* 调整最大宽度，使单列内容更舒适 */
     margin: 20px auto;
     padding: 0 20px;
-    display: grid; /* 使用 CSS Grid 布局 */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 自动填充，最小宽度300px */
-    gap: 20px; /* 卡片之间的间距 */
+    display: grid; /* 仍然使用grid，但只定义一列 */
+    grid-template-columns: 1fr; /* 关键改动：定义为一列，占据所有可用空间 */
+    gap: 20px;
 }
 
 .artwork-item {
