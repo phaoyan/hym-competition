@@ -1,0 +1,83 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: grid; /* 使用 CSS Grid 布局 */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 自动填充，最小宽度300px */
+    gap: 20px; /* 卡片之间的间距 */
+}
+
+.artwork-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.artwork-item:hover {
+    transform: translateY(-5px);
+}
+
+.artwork-item h3 {
+    color: #3498db;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.artwork-item p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.artwork-item audio {
+    width: 100%;
+    margin-top: 15px;
+    outline: none; /* 移除点击时的边框 */
+}
+
+.loading-message {
+    grid-column: 1 / -1; /* 让加载信息跨越所有列 */
+    text-align: center;
+    font-style: italic;
+    color: #888;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #eee;
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* 媒体查询：适应小屏幕 */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; /* 在小屏幕上显示单列 */
+    }
+}
